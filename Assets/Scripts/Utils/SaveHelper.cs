@@ -68,48 +68,27 @@ namespace AdvantClicker.Utils
         
         private static string GetMainSaveKey(int saveId)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(SaveKeys.MainSaveKey);
-            stringBuilder.Append(saveId);
-
-            return stringBuilder.ToString();
+            return $"{SaveKeys.MainSaveKey}{saveId}";
         }
 
         private static string GetLvlSaveKey(int saveId)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(SaveKeys.LevelSaveKey);
-            stringBuilder.Append(saveId);
-
-            return stringBuilder.ToString();
+            return $"{SaveKeys.LevelSaveKey}{saveId}";
         }
         
         private static string GetProgressSaveKey(int saveId)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(SaveKeys.ProgressSaveKey);
-            stringBuilder.Append(saveId);
-
-            return stringBuilder.ToString();
+            return $"{SaveKeys.ProgressSaveKey}{saveId}";
         }
         
         private static string GetUpgradesCountSaveKey(int saveId)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(SaveKeys.UpgradesCountSaveKey);
-            stringBuilder.Append(saveId);
-
-            return stringBuilder.ToString();
+            return $"{SaveKeys.UpgradesCountSaveKey}{saveId}";
         }
         
         private static string GetUpgradeSaveKey(string upgradesCountSaveKey, int upgradeId)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(upgradesCountSaveKey);
-            stringBuilder.Append(SaveKeys.UpgradeSaveKey);
-            stringBuilder.Append(upgradeId);
-
-            return stringBuilder.ToString();
+            return $"{upgradesCountSaveKey}{SaveKeys.UpgradeSaveKey}{upgradeId}";
         }        
     }
 }

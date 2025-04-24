@@ -66,7 +66,7 @@ namespace AdvantClicker.MonoBehaviours
             stringBuilder.Append(price);
             stringBuilder.Append(_upgradeCostTextPostfix);
             
-            _upgradeCostText.text = stringBuilder.ToString();
+            _upgradeCostText.text = $"{_upgradeCostTextPrefix}{price}{_upgradeCostTextPostfix}";
         }
 
         public void UpdateUpgradeButtons(BusinessUpgrade[] upgrades)

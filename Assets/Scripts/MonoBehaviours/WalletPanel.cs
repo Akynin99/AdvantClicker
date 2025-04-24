@@ -27,12 +27,7 @@ namespace AdvantClicker.MonoBehaviours
             {
                 _lastBalance = balance;
                 
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(_moneyTextPrefix);
-                stringBuilder.Append(_lastBalance);
-                stringBuilder.Append(_moneyTextPostfix);
-                
-                _moneyText.text = stringBuilder.ToString();
+                _moneyText.text = $"{_moneyTextPrefix}{_lastBalance}{_moneyTextPostfix}";
             }
         }
     }

@@ -38,19 +38,9 @@ namespace AdvantClicker.MonoBehaviours
 
             int multPercent = (int)(upgrade.IncomeMultiplier * 100);
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(_incomeTextPrefix);
-            stringBuilder.Append(multPercent);
-            stringBuilder.Append(_incomeTextPostfix);
-
-            _incomeText.text = stringBuilder.ToString();
+            _incomeText.text = $"{_incomeTextPrefix}{multPercent}{_incomeTextPostfix}";
             
-            stringBuilder.Clear();
-            stringBuilder.Append(_costTextPrefix);
-            stringBuilder.Append(upgrade.Cost);
-            stringBuilder.Append(_costTextPostfix);
-            
-            _costText.text = stringBuilder.ToString();
+            _costText.text = $"{_costTextPrefix}{upgrade.Cost}{_costTextPostfix}";
             
             _purchasedIndicator.SetActive(false);
             _costText.gameObject.SetActive(true);
