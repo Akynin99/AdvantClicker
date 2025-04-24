@@ -43,8 +43,6 @@ namespace AdvantClicker.Systems
                     // no save - load from config
                     InitDefaultValues(ref business, businessConfig);
                 }
-
-                _mainUIScreen.AddBusinessPanel(entity);
             }
         }
 

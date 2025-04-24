@@ -20,7 +20,7 @@ namespace AdvantClicker.MonoBehaviours
             CreateBusinessPanels(_ecsWorld);
         }
 
-        public void AddBusinessPanel(EcsEntity businessEntity)
+        private void AddBusinessPanel(EcsEntity businessEntity)
         {
             ref var business = ref businessEntity.Get<Business>();
             BusinessPanel panel = Instantiate(businessPrefab, businessesContainer);

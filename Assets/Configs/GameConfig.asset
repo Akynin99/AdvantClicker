@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03d140fbd0b0f84c8baa169a9d1ba84, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  startingBalance: 1000
+  startingBalance: 0
   savingEveryFrame: 1
   savingCooldown: 5
   businesses:
