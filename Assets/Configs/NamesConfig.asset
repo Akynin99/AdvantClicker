@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f2fcf81d734769b3ab281a5180572a, type: 3}
   m_Name: NamesConfig
   m_EditorClassIdentifier: 
-  names:
+  _names:
   - Id: 10
     Name: "\u0411\u0438\u0437\u043D\u0435\u0441 1"
   - Id: 11

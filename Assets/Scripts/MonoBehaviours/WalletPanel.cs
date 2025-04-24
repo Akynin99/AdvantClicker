@@ -9,9 +9,9 @@ namespace AdvantClicker.MonoBehaviours
 {
     public class WalletPanel : EcsUIEntity
     {
-        [SerializeField] private TMP_Text moneyText;
-        [SerializeField] private string moneyTextPrefix;
-        [SerializeField] private string moneyTextPostfix;
+        [SerializeField] private TMP_Text _moneyText;
+        [SerializeField] private string _moneyTextPrefix;
+        [SerializeField] private string _moneyTextPostfix;
         
         private int _lastBalance = -1;
 
@@ -28,11 +28,11 @@ namespace AdvantClicker.MonoBehaviours
                 _lastBalance = balance;
                 
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append(moneyTextPrefix);
+                stringBuilder.Append(_moneyTextPrefix);
                 stringBuilder.Append(_lastBalance);
-                stringBuilder.Append(moneyTextPostfix);
+                stringBuilder.Append(_moneyTextPostfix);
                 
-                moneyText.text = stringBuilder.ToString();
+                _moneyText.text = stringBuilder.ToString();
             }
         }
     }

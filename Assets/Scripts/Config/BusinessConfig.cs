@@ -8,24 +8,24 @@ namespace AdvantClicker.Config
     public class BusinessConfig : ScriptableObject
     {
         [Header("Identifiers")]
-        [SerializeField] private int saveId;
-        [SerializeField] private int nameId;
+        [SerializeField] private int _saveId;
+        [SerializeField] private int _nameId;
         
         [Space, Header("Properties")]
-        [SerializeField] private bool startingBusiness; // if true - already purchased at the start of the game
-        [SerializeField] private float incomeGenerationTime;
-        [SerializeField] private int baseLevelUpCost;
-        [SerializeField] private int baseIncome;
+        [SerializeField] private bool _startingBusiness; // if true - already purchased at the start of the game
+        [SerializeField] private float _incomeGenerationTime;
+        [SerializeField] private int _baseLevelUpCost;
+        [SerializeField] private int _baseIncome;
         
         [Space, Header("Upgrades")]
-        [SerializeField] private List<BusinessUpgradeConfig> availableUpgrades; // List of all available upgrades
+        [SerializeField] private List<BusinessUpgradeConfig> _availableUpgrades; // List of all available upgrades
         
-        public int SaveId => saveId;
-        public bool StartingBusiness => startingBusiness; 
-        public int NameId => nameId;
-        public float IncomeGenerationTime => incomeGenerationTime;
-        public int BaseLevelUpCost => baseLevelUpCost;
-        public int BaseIncome => baseIncome;
-        public List<BusinessUpgradeConfig> AvailableUpgrades => availableUpgrades; 
+        public int SaveId => _saveId;
+        public bool StartingBusiness => _startingBusiness; 
+        public int NameId => _nameId;
+        public float IncomeGenerationTime => _incomeGenerationTime;
+        public int BaseLevelUpCost => _baseLevelUpCost;
+        public int BaseIncome => _baseIncome;
+        public List<BusinessUpgradeConfig> AvailableUpgrades => _availableUpgrades; 
     }
 } 

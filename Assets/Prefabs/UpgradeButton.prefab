@@ -189,15 +189,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b5ecf7a7126204f9fc21f32c34e159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 4594847443222341095}
-  incomeText: {fileID: 70964313723751194}
-  incomeTextPrefix: "\u0414\u043E\u0445\u043E\u0434: + "
-  incomeTextPostfix: '%'
-  costText: {fileID: 5583365747545867465}
-  costTextPrefix: "\u0426\u0435\u043D\u0430: "
-  costTextPostfix: $
-  purchaseButton: {fileID: 7957851387733350630}
-  purchasedIndicator: {fileID: 7624328102507256805}
+  _nameText: {fileID: 4594847443222341095}
+  _incomeText: {fileID: 70964313723751194}
+  _incomeTextPrefix: "\u0414\u043E\u0445\u043E\u0434: + "
+  _incomeTextPostfix: $
+  _costText: {fileID: 5583365747545867465}
+  _costTextPrefix: "\u0426\u0435\u043D\u0430: "
+  _costTextPostfix: $
+  _purchaseButton: {fileID: 7957851387733350630}
+  _purchasedIndicator: {fileID: 7624328102507256805}
 --- !u!222 &5701360301985856739
 CanvasRenderer:
   m_ObjectHideFlags: 0

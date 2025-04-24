@@ -10,15 +10,15 @@ namespace AdvantClicker.MonoBehaviours
     // Prefab for displaying business upgrade in UI
     public class BusinessUpgradeButton : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI nameText;
-        [SerializeField] private TextMeshProUGUI incomeText;
-        [SerializeField] private string incomeTextPrefix;
-        [SerializeField] private string incomeTextPostfix;
-        [SerializeField] private TextMeshProUGUI costText;
-        [SerializeField] private string costTextPrefix;
-        [SerializeField] private string costTextPostfix;
-        [SerializeField] private Button purchaseButton;
-        [SerializeField] private GameObject purchasedIndicator;
+        [SerializeField] private TextMeshProUGUI _nameText;
+        [SerializeField] private TextMeshProUGUI _incomeText;
+        [SerializeField] private string _incomeTextPrefix;
+        [SerializeField] private string _incomeTextPostfix;
+        [SerializeField] private TextMeshProUGUI _costText;
+        [SerializeField] private string _costTextPrefix;
+        [SerializeField] private string _costTextPostfix;
+        [SerializeField] private Button _purchaseButton;
+        [SerializeField] private GameObject _purchasedIndicator;
         
         private int _upgradeId;
         private int _businessId;
@@ -29,38 +29,38 @@ namespace AdvantClicker.MonoBehaviours
             _ecsEntity = entity;
             _upgradeId = upgrade.Id;
             
-            if (purchaseButton != null)
+            if (_purchaseButton != null)
             {
-                purchaseButton.onClick.AddListener(PurchaseButtonPressed);
+                _purchaseButton.onClick.AddListener(PurchaseButtonPressed);
             }
 
-            nameText.text = upgrade.Name;
+            _nameText.text = upgrade.Name;
 
             int multPercent = (int)(upgrade.IncomeMultiplier * 100);
 
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(incomeTextPrefix);
+            stringBuilder.Append(_incomeTextPrefix);
             stringBuilder.Append(multPercent);
-            stringBuilder.Append(incomeTextPostfix);
+            stringBuilder.Append(_incomeTextPostfix);
 
-            incomeText.text = stringBuilder.ToString();
+            _incomeText.text = stringBuilder.ToString();
             
             stringBuilder.Clear();
-            stringBuilder.Append(costTextPrefix);
+            stringBuilder.Append(_costTextPrefix);
             stringBuilder.Append(upgrade.Cost);
-            stringBuilder.Append(costTextPostfix);
+            stringBuilder.Append(_costTextPostfix);
             
-            costText.text = stringBuilder.ToString();
+            _costText.text = stringBuilder.ToString();
             
-            purchasedIndicator.SetActive(false);
-            costText.gameObject.SetActive(true);
+            _purchasedIndicator.SetActive(false);
+            _costText.gameObject.SetActive(true);
         }
 
         public void SetIsPurchased(bool isPurchased)
         {
-            purchaseButton.interactable = !isPurchased;
-            purchasedIndicator.SetActive(isPurchased);
-            costText.gameObject.SetActive(!isPurchased);
+            _purchaseButton.interactable = !isPurchased;
+            _purchasedIndicator.SetActive(isPurchased);
+            _costText.gameObject.SetActive(!isPurchased);
         }
         
         private void PurchaseButtonPressed()

@@ -11,16 +11,16 @@ namespace AdvantClicker.MonoBehaviours
     // Prefab for displaying business in UI
     public class BusinessPanel : MonoBehaviour
     {
-        [SerializeField] private Image progressBar;
-        [SerializeField] private TextMeshProUGUI nameText;
-        [SerializeField] private TextMeshProUGUI levelText;
-        [SerializeField] private TextMeshProUGUI incomeText;
-        [SerializeField] private Button levelUpButton;
-        [SerializeField] private TextMeshProUGUI upgradeCostText;
-        [SerializeField] private string upgradeCostTextPrefix;
-        [SerializeField] private string upgradeCostTextPostfix;
-        [SerializeField] private Transform upgradesContainer;
-        [SerializeField] private BusinessUpgradeButton upgradeButtonPrefab;
+        [SerializeField] private Image _progressBar;
+        [SerializeField] private TextMeshProUGUI _nameText;
+        [SerializeField] private TMP_Text _levelText;
+        [SerializeField] private TMP_Text _incomeText;
+        [SerializeField] private Button _levelUpButton;
+        [SerializeField] private TMP_Text _upgradeCostText;
+        [SerializeField] private string _upgradeCostTextPrefix;
+        [SerializeField] private string _upgradeCostTextPostfix;
+        [SerializeField] private Transform _upgradesContainer;
+        [SerializeField] private BusinessUpgradeButton _upgradeButtonPrefab;
 
         private int _lastLvl = -1;
         private int _lastIncome = -1;
@@ -32,28 +32,28 @@ namespace AdvantClicker.MonoBehaviours
         public void Init(EcsEntity ecsEntity, string businessName, BusinessUpgrade[] upgrades)
         {
             _ecsEntity = ecsEntity;
-            nameText.text = businessName;
-            levelUpButton.onClick.AddListener(LevelUpButtonPressed);
+            _nameText.text = businessName;
+            _levelUpButton.onClick.AddListener(LevelUpButtonPressed);
             CreateUpgradeButtons(upgrades);
         }
         
         public void UpdateProgress(float progress)
         {
-            progressBar.fillAmount = progress;
+            _progressBar.fillAmount = progress;
         }
 
         public void UpdateLevel(int lvl)
         {
             if (_lastLvl == lvl) return;
             _lastLvl = lvl;
-            levelText.text = lvl.ToString();
+            _levelText.text = lvl.ToString();
         }
         
         public void UpdateIncome(int income)
         {
             if (_lastIncome == income) return;
             _lastIncome = income;
-            incomeText.text = income.ToString();
+            _incomeText.text = income.ToString();
         }
         
         public void UpdateLvlUpPrice(int price)
@@ -62,11 +62,11 @@ namespace AdvantClicker.MonoBehaviours
             _lastPrice = price;
             
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(upgradeCostTextPrefix);
+            stringBuilder.Append(_upgradeCostTextPrefix);
             stringBuilder.Append(price);
-            stringBuilder.Append(upgradeCostTextPostfix);
+            stringBuilder.Append(_upgradeCostTextPostfix);
             
-            upgradeCostText.text = stringBuilder.ToString();
+            _upgradeCostText.text = stringBuilder.ToString();
         }
 
         public void UpdateUpgradeButtons(BusinessUpgrade[] upgrades)
@@ -88,7 +88,7 @@ namespace AdvantClicker.MonoBehaviours
             for (var i = 0; i < upgrades.Length; i++)
             {
                 var upgrade = upgrades[i];
-                var button = Instantiate(upgradeButtonPrefab, upgradesContainer);
+                var button = Instantiate(_upgradeButtonPrefab, _upgradesContainer);
                 button.Init(_ecsEntity, upgrade);
                 _upgradeButtons[i] = button;
             }

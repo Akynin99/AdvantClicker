@@ -5,7 +5,7 @@ namespace AdvantClicker.Core
 {
     public class EcsUIScreen : MonoBehaviour
     {
-        [SerializeField] private EcsUIEntity[] ecsUIEntities;
+        [SerializeField] private EcsUIEntity[] _ecsUIEntities;
         
         protected EcsWorld _ecsWorld;
         
@@ -13,9 +13,9 @@ namespace AdvantClicker.Core
         {
             _ecsWorld = world;
 
-            for (int i = 0; i < ecsUIEntities.Length; i++)
+            for (int i = 0; i < _ecsUIEntities.Length; i++)
             {
-                ecsUIEntities[i].Init(world);
+                _ecsUIEntities[i].Init(world);
             }
         }
     }

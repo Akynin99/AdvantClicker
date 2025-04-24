@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 10
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 10
@@ -240,10 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69487c71ab1e45aa821d4dcc07c3e239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ecsUIEntities:
+  _ecsUIEntities:
   - {fileID: 7894932967075723166}
-  businessesContainer: {fileID: 3551642464990357016}
-  businessPrefab: {fileID: 7006137671190927814, guid: 51c1a5ad77277104f978686d07cffe31, type: 3}
+  _businessesContainer: {fileID: 3551642464990357016}
+  _businessPrefab: {fileID: 7006137671190927814, guid: 51c1a5ad77277104f978686d07cffe31, type: 3}
 --- !u!223 &8398075139688968329
 Canvas:
   m_ObjectHideFlags: 0

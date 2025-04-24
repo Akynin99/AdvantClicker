@@ -8,7 +8,7 @@ namespace AdvantClicker.Config
     [CreateAssetMenu(fileName = "NamesConfig", menuName = "Config/NamesConfig")]
     public class NamesConfig : ScriptableObject
     {
-        [SerializeField] private IdNamePair[] names;
+        [SerializeField] private IdNamePair[] _names;
         
         [Serializable]
         private struct IdNamePair
@@ -19,12 +19,12 @@ namespace AdvantClicker.Config
 
         private void OnValidate()
         {
-            if (names == null) return;
+            if (_names == null) return;
 
             var idSet = new HashSet<int>();
             var duplicates = new List<int>();
             
-            foreach (var pair in names)
+            foreach (var pair in _names)
             {
                 
                 if (!idSet.Add(pair.Id) && !duplicates.Contains(pair.Id))
@@ -41,11 +41,11 @@ namespace AdvantClicker.Config
 
         public string GetName(int id)
         {
-            for (int i = 0; i < names.Length; i++)
+            for (int i = 0; i < _names.Length; i++)
             {
-                if (names[i].Id != id) continue;
+                if (_names[i].Id != id) continue;
 
-                return names[i].Name;
+                return _names[i].Name;
             }
             
             Debug.LogError("Name not found!");

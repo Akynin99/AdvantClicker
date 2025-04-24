@@ -311,10 +311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc66c49fd28c0043bafc8c3945dfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameConfig: {fileID: 11400000, guid: 98a05be55c02a4e42a1730074a38fa2e, type: 2}
-  namesConfig: {fileID: 11400000, guid: 807a7f4ebc1038d43a00cadce7f6451e, type: 2}
-  mainUIScreen: {fileID: 8336145026033568690}
-  ecsUIScreens:
+  _gameConfig: {fileID: 11400000, guid: 98a05be55c02a4e42a1730074a38fa2e, type: 2}
+  _namesConfig: {fileID: 11400000, guid: 807a7f4ebc1038d43a00cadce7f6451e, type: 2}
+  _mainUIScreen: {fileID: 8336145026033568690}
+  _ecsUIScreens:
   - {fileID: 8336145026033568690}
 --- !u!4 &1996332489
 Transform:
@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551642464990357016, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.446118
+      value: -0.00013418344
       objectReference: {fileID: 0}
     - target: {fileID: 3919286999467547900, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
       propertyPath: m_Pivot.x
@@ -445,6 +445,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839969727508522967, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810956674145648230, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810956674145648230, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810956674145648230, guid: e02bff08d4c87794e9e3c7640b8bac39, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

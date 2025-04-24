@@ -10,10 +10,10 @@ namespace AdvantClicker
     // Entry point for initializing ECS systems
     public class EcsStartup : MonoBehaviour
     {
-        [SerializeField] private GameConfig gameConfig;
-        [SerializeField] private NamesConfig namesConfig;
-        [SerializeField] private MainUIScreen mainUIScreen;
-        [SerializeField] private EcsUIScreen[] ecsUIScreens;
+        [SerializeField] private GameConfig _gameConfig;
+        [SerializeField] private NamesConfig _namesConfig;
+        [SerializeField] private MainUIScreen _mainUIScreen;
+        [SerializeField] private EcsUIScreen[] _ecsUIScreens;
         
         private EcsWorld _world;
         private EcsSystems _systems;
@@ -45,17 +45,17 @@ namespace AdvantClicker
                 .Add(new WalletViewUpdateSystem())
 
                 // Inject dependencies
-                .Inject(gameConfig)
-                .Inject(namesConfig)
-                .Inject(mainUIScreen)
+                .Inject(_gameConfig)
+                .Inject(_namesConfig)
+                .Inject(_mainUIScreen)
 
                 // Initialize systems
                 .Init();
 
             // Init UI entities
-            for (int i = 0; i < ecsUIScreens.Length; i++)
+            for (int i = 0; i < _ecsUIScreens.Length; i++)
             {
-                ecsUIScreens[i].Init(_world);
+                _ecsUIScreens[i].Init(_world);
             }
         }
 

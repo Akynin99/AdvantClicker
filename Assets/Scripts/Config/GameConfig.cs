@@ -7,15 +7,15 @@ namespace AdvantClicker.Config
     [CreateAssetMenu(fileName = "GameConfig", menuName = "Config/GameConfig")]
     public class GameConfig : ScriptableObject
     {
-        [SerializeField] private int startingBalance;
-        [SerializeField] private bool savingEveryFrame;
-        [SerializeField] private float savingCooldown;
-        [SerializeField] private List<BusinessConfig> businesses;
+        [SerializeField] private int _startingBalance;
+        [SerializeField] private bool _savingEveryFrame;
+        [SerializeField] private float _savingCooldown;
+        [SerializeField] private List<BusinessConfig> _businesses;
 
-        public int StartingBalance => startingBalance;
-        public List<BusinessConfig> Businesses => businesses;
-        public bool SavingEveryFrame => savingEveryFrame;
-        public float SavingCooldown => savingCooldown;
+        public int StartingBalance => _startingBalance;
+        public List<BusinessConfig> Businesses => _businesses;
+        public bool SavingEveryFrame => _savingEveryFrame;
+        public float SavingCooldown => _savingCooldown;
     }
 
 } 

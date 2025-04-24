@@ -7,8 +7,8 @@ namespace AdvantClicker.MonoBehaviours
 {
     public class MainUIScreen : EcsUIScreen
     {
-        [SerializeField] private Transform businessesContainer;
-        [SerializeField] private BusinessPanel businessPrefab;
+        [SerializeField] private Transform _businessesContainer;
+        [SerializeField] private BusinessPanel _businessPrefab;
         
         public override void Init(EcsWorld world)
         {
@@ -19,7 +19,7 @@ namespace AdvantClicker.MonoBehaviours
         private void AddBusinessPanel(EcsEntity businessEntity)
         {
             ref var business = ref businessEntity.Get<Business>();
-            BusinessPanel panel = Instantiate(businessPrefab, businessesContainer);
+            BusinessPanel panel = Instantiate(_businessPrefab, _businessesContainer);
             panel.Init(businessEntity, business.Name, business.Upgrades);
             ref BusinessView component = ref businessEntity.Get<BusinessView>();
             component.BusinessPanel = panel;

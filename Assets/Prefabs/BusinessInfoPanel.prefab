@@ -94,16 +94,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e988dfc7c9a4946a8c4517b825856b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressBar: {fileID: 7613887317190913955}
-  nameText: {fileID: 3418439682294298914}
-  levelText: {fileID: 3476988482127517621}
-  incomeText: {fileID: 7139126428710014627}
-  levelUpButton: {fileID: 8988016472955046027}
-  upgradeCostText: {fileID: 8605601831713812951}
-  upgradeCostTextPrefix: "\u0426\u0435\u043D\u0430: "
-  upgradeCostTextPostfix: $
-  upgradesContainer: {fileID: 4955044492521267438}
-  upgradeButtonPrefab: {fileID: 4603735923174810043, guid: 1f188c150b1d1fe4998225ddc9d47a96, type: 3}
+  _progressBar: {fileID: 7613887317190913955}
+  _nameText: {fileID: 3418439682294298914}
+  _levelText: {fileID: 3476988482127517621}
+  _incomeText: {fileID: 7139126428710014627}
+  _levelUpButton: {fileID: 8988016472955046027}
+  _upgradeCostText: {fileID: 8605601831713812951}
+  _upgradeCostTextPrefix: "\u0426\u0435\u043D\u0430: "
+  _upgradeCostTextPostfix: $
+  _upgradesContainer: {fileID: 4955044492521267438}
+  _upgradeButtonPrefab: {fileID: 4603735923174810043, guid: 1f188c150b1d1fe4998225ddc9d47a96, type: 3}
 --- !u!1 &1271877364476374967
 GameObject:
   m_ObjectHideFlags: 0

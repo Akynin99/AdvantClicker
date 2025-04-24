@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2205a50f37a8ae54492666f47b0931d7, type: 3}
   m_Name: BusinessConfig 1
   m_EditorClassIdentifier: 
-  saveId: 10
-  nameId: 10
-  startingBusiness: 1
-  incomeGenerationTime: 3
-  baseLevelUpCost: 3
-  baseIncome: 3
-  availableUpgrades:
+  _saveId: 10
+  _nameId: 10
+  _startingBusiness: 1
+  _incomeGenerationTime: 3
+  _baseLevelUpCost: 3
+  _baseIncome: 3
+  _availableUpgrades:
   - NameId: 11
     Cost: 50
     IncomeMultiplier: 0.5
