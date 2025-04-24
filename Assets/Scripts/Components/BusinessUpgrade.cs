@@ -1,5 +1,3 @@
-using System;
-
 namespace AdvantClicker.Components
 {
     public class BusinessUpgrade

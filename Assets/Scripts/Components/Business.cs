@@ -1,7 +1,3 @@
-using System;
-using AdvantClicker.Config;
-using UnityEngine.Serialization;
-
 namespace AdvantClicker.Components
 {
     public struct Business

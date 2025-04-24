@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +10,13 @@ namespace AdvantClicker.Config
         [Header("Identifiers")]
         [SerializeField] private int saveId;
         [SerializeField] private int nameId;
+        
         [Space, Header("Properties")]
         [SerializeField] private bool startingBusiness; // if true - already purchased at the start of the game
         [SerializeField] private float incomeGenerationTime;
         [SerializeField] private int baseLevelUpCost;
         [SerializeField] private int baseIncome;
+        
         [Space, Header("Upgrades")]
         [SerializeField] private List<BusinessUpgradeConfig> availableUpgrades; // List of all available upgrades
         

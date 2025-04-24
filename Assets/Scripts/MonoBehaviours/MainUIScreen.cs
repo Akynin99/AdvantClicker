@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AdvantClicker.Components;
+﻿using AdvantClicker.Components;
 using AdvantClicker.Core;
 using Leopotam.Ecs;
 using UnityEngine;

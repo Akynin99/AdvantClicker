@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-
-namespace AdvantClicker.Components
+﻿namespace AdvantClicker.Components
 {
     public struct BusinessSaveData
     {

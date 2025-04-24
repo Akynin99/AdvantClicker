@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Text;
 using AdvantClicker.Components;
-using AdvantClicker.Config;
 using Leopotam.Ecs;
 using UnityEngine;
 using UnityEngine.UI;

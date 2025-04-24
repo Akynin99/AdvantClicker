@@ -1,10 +1,8 @@
-using AdvantClicker.Components;
 using AdvantClicker.Config;
 using AdvantClicker.Core;
 using AdvantClicker.MonoBehaviours;
 using AdvantClicker.Systems;
 using Leopotam.Ecs;
-using TMPro;
 using UnityEngine;
 
 namespace AdvantClicker

@@ -1,5 +1,4 @@
 ﻿using AdvantClicker.Components;
-using AdvantClicker.Utils;
 using Leopotam.Ecs;
 using UnityEngine;
 

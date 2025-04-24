@@ -1,9 +1,7 @@
-﻿using System;
-using AdvantClicker.Components;
+﻿using AdvantClicker.Components;
 using AdvantClicker.Config;
 using AdvantClicker.Utils;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace AdvantClicker.Systems
 {
