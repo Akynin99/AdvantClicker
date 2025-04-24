@@ -14,7 +14,7 @@ namespace AdvantClicker.Systems
         public void Init()
         {
             var walletEntity = _world.NewEntity();
-            ref var wallet = ref walletEntity.Get<PlayerWallet>();
+            ref var wallet = ref walletEntity.Get<Wallet>();
 
             if (SaveHelper.WalletSaveExists())
             {

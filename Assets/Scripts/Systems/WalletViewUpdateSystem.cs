@@ -5,8 +5,8 @@ namespace AdvantClicker.Systems
 {
     public class WalletViewUpdateSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerWallet> _wallet = null;
-        private readonly EcsFilter<PlayerWalletView> _views = null;
+        private readonly EcsFilter<Wallet> _wallet = null;
+        private readonly EcsFilter<WalletView> _views = null;
         
         public void Run()
         {

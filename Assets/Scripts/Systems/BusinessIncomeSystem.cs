@@ -8,7 +8,7 @@ namespace AdvantClicker.Systems
     public class BusinessIncomeSystem : IEcsRunSystem
     {
         private readonly EcsFilter<Business> _businesses = null;
-        private readonly EcsFilter<PlayerWallet> _wallet = null;
+        private readonly EcsFilter<Wallet> _wallet = null;
 
         public void Run()
         {

@@ -7,7 +7,7 @@ namespace AdvantClicker.Systems
 {
     public class WalletSaveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerWallet> _wallet = null;
+        private readonly EcsFilter<Wallet> _wallet = null;
         private readonly GameConfig _gameConfig = null;
         
         public void Run()

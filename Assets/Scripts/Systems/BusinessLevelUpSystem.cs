@@ -7,13 +7,13 @@ namespace AdvantClicker.Systems
     public class BusinessLevelUpSystem : IEcsRunSystem
     {
         private readonly EcsFilter<Business, TryToLevelUpBusinessSignal> _businesses = null;
-        private readonly EcsFilter<PlayerWallet> _wallet = null;
+        private readonly EcsFilter<Wallet> _wallet = null;
         
         public void Run()
         {
             if (_wallet.IsEmpty() || _businesses.IsEmpty()) return;
             
-            ref PlayerWallet wallet = ref _wallet.Get1(0);
+            ref Wallet wallet = ref _wallet.Get1(0);
             
             foreach (var i in _businesses)
             {

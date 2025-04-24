@@ -18,7 +18,7 @@ namespace AdvantClicker.MonoBehaviours
         public override void Init(EcsWorld world)
         {
             base.Init(world);
-            world.NewEntity().Get<PlayerWalletView>().WalletPanel = this;
+            world.NewEntity().Get<WalletView>().WalletPanel = this;
         }
         
         public void UpdateBalance(int balance)
