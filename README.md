@@ -2,6 +2,8 @@
 
 A Unity-based idle/clicker game using ECS (Entity Component System) architecture.
 
+**Unity 2022.3.40f1**
+
 ## Project Structure
 
 ### Architecture Overview
