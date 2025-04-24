@@ -1,4 +1,4 @@
-using AdvantClicker.Config;
+using AdvantClicker.Configs;
 using AdvantClicker.Core;
 using AdvantClicker.MonoBehaviours;
 using AdvantClicker.Systems;

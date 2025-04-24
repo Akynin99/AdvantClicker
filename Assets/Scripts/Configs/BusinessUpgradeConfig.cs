@@ -1,6 +1,6 @@
 using System;
 
-namespace AdvantClicker.Config
+namespace AdvantClicker.Configs
 {
     // Class for configuring business upgrades
     [Serializable]

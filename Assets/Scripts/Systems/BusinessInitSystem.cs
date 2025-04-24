@@ -1,6 +1,6 @@
 using Leopotam.Ecs;
 using AdvantClicker.Components;
-using AdvantClicker.Config;
+using AdvantClicker.Configs;
 using AdvantClicker.MonoBehaviours;
 using AdvantClicker.Utils;
 

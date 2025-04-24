@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AdvantClicker.Config
+namespace AdvantClicker.Configs
 {
     // ScriptableObject for configuring names of businesses and upgrades
     [CreateAssetMenu(fileName = "NamesConfig", menuName = "Config/NamesConfig")]

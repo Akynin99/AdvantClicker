@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AdvantClicker.Config
+namespace AdvantClicker.Configs
 {
     // ScriptableObject for configuring general game parameters
     [CreateAssetMenu(fileName = "GameConfig", menuName = "Config/GameConfig")]

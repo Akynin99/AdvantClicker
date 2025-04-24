@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AdvantClicker.Config
+namespace AdvantClicker.Configs
 {
     // ScriptableObject for configuring business parameters
     [CreateAssetMenu(fileName = "BusinessConfig", menuName = "Config/Business")]
