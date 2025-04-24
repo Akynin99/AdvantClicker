@@ -13,7 +13,6 @@ namespace AdvantClicker.MonoBehaviours
         public override void Init(EcsWorld world)
         {
             base.Init(world);
-            
             CreateBusinessPanels(_ecsWorld);
         }
 

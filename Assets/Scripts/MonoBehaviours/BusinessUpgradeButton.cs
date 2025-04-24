@@ -20,7 +20,6 @@ namespace AdvantClicker.MonoBehaviours
         [SerializeField] private Button purchaseButton;
         [SerializeField] private GameObject purchasedIndicator;
         
-        
         private int _upgradeId;
         private int _businessId;
         private EcsEntity _ecsEntity;
@@ -60,7 +59,6 @@ namespace AdvantClicker.MonoBehaviours
         public void SetIsPurchased(bool isPurchased)
         {
             purchaseButton.interactable = !isPurchased;
-            
             purchasedIndicator.SetActive(isPurchased);
             costText.gameObject.SetActive(!isPurchased);
         }

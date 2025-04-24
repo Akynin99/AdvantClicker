@@ -15,7 +15,6 @@ namespace AdvantClicker.Systems
             
             ref PlayerWallet wallet = ref _wallet.Get1(0);
             
-            
             foreach (var i in _businesses)
             {
                 ref var business = ref _businesses.Get1(i);

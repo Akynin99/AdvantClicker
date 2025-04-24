@@ -49,6 +49,22 @@ namespace AdvantClicker.Utils
 
             return business;
         }
+
+        public static bool WalletSaveExists()
+        {
+            return PlayerPrefs.GetInt(SaveKeys.WalletSaveKey, -1) >= 0;
+        }
+
+        public static int LoadWalletBalance()
+        {
+            return PlayerPrefs.GetInt(SaveKeys.WalletSaveKey);
+        }
+
+        public static void SaveWalletBalance(int balance)
+        {
+            PlayerPrefs.SetInt(SaveKeys.WalletSaveKey, balance);
+            PlayerPrefs.Save();
+        }
         
         private static string GetMainSaveKey(int saveId)
         {
@@ -94,22 +110,6 @@ namespace AdvantClicker.Utils
             stringBuilder.Append(upgradeId);
 
             return stringBuilder.ToString();
-        }
-
-        public static bool WalletSaveExists()
-        {
-            return PlayerPrefs.GetInt(SaveKeys.WalletSaveKey, -1) >= 0;
-        }
-
-        public static int LoadWalletBalance()
-        {
-            return PlayerPrefs.GetInt(SaveKeys.WalletSaveKey);
-        }
-
-        public static void SaveWalletBalance(int balance)
-        {
-            PlayerPrefs.SetInt(SaveKeys.WalletSaveKey, balance);
-            PlayerPrefs.Save();
-        }
+        }        
     }
 }

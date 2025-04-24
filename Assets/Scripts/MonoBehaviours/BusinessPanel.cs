@@ -32,11 +32,8 @@ namespace AdvantClicker.MonoBehaviours
         public void Init(EcsEntity ecsEntity, string businessName, BusinessUpgrade[] upgrades)
         {
             _ecsEntity = ecsEntity;
-
             nameText.text = businessName;
-            
             levelUpButton.onClick.AddListener(LevelUpButtonPressed);
-            
             CreateUpgradeButtons(upgrades);
         }
         
@@ -48,29 +45,23 @@ namespace AdvantClicker.MonoBehaviours
         public void UpdateLevel(int lvl)
         {
             if (_lastLvl == lvl) return;
-
             _lastLvl = lvl;
-            
             levelText.text = lvl.ToString();
         }
         
         public void UpdateIncome(int income)
         {
             if (_lastIncome == income) return;
-
             _lastIncome = income;
-            
             incomeText.text = income.ToString();
         }
         
         public void UpdateLvlUpPrice(int price)
         {
             if (_lastPrice == price) return;
-
             _lastPrice = price;
             
             StringBuilder stringBuilder = new StringBuilder();
-            
             stringBuilder.Append(upgradeCostTextPrefix);
             stringBuilder.Append(price);
             stringBuilder.Append(upgradeCostTextPostfix);

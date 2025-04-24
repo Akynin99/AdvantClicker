@@ -52,7 +52,6 @@ namespace AdvantClicker.Systems
             business.IsPurchased = business.Level > 0;
             business.Progress = saveData.Progress;
             
-            
             business.Upgrades = new BusinessUpgrade[businessConfig.AvailableUpgrades.Count];
 
             for (var i = 0; i < businessConfig.AvailableUpgrades.Count; i++)
